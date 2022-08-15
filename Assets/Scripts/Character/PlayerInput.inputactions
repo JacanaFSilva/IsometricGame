@@ -24,6 +24,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "f3ce5f27-620d-4159-b306-7d5f2c4d52c9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "lightAttack",
                     "type": "Button",
                     "id": "5cfcdbe5-179d-4b88-b7dd-5c7e26a1ffcb",
@@ -33,9 +42,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "heavyAttack",
                     "type": "Button",
-                    "id": "f3ce5f27-620d-4159-b306-7d5f2c4d52c9",
+                    "id": "1ab244c3-e6e4-4db3-99c2-dd2f8d81298f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -43,17 +52,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "086a77de-b5d4-473e-9cb8-65ecc2a59976",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "gamepad",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "7a6b262f-f988-486b-8e4b-e98d8fbd3cfe",
@@ -111,6 +109,17 @@
                 },
                 {
                     "name": "",
+                    "id": "086a77de-b5d4-473e-9cb8-65ecc2a59976",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1bac979f-ab36-4076-b8c6-781e34372dd3",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -123,11 +132,55 @@
                 {
                     "name": "",
                     "id": "cd7c62fa-29d9-4c77-8df8-563153907c42",
-                    "path": "<Gamepad>/leftShoulder",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "gamepad",
                     "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77ba929d-1495-47a7-8c32-eabb563b1ded",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "keyboard/mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6fea7984-4424-4688-9d6a-4fd98af5b833",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79a191e5-04a5-4325-8e35-61cd5504afb9",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "heavyAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "69629689-18fc-42b8-93b8-c3487e844394",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "heavyAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -144,34 +197,23 @@
                 },
                 {
                     "name": "",
-                    "id": "c7401fdf-1f07-41c2-809a-049462f710e9",
-                    "path": "<Gamepad>/buttonWest",
+                    "id": "e9b14cda-0b59-47b5-9765-1ac3c9711607",
+                    "path": "<Keyboard>/k",
                     "interactions": "",
                     "processors": "",
-                    "groups": "gamepad",
+                    "groups": "",
                     "action": "lightAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "6fea7984-4424-4688-9d6a-4fd98af5b833",
-                    "path": "<Gamepad>/buttonSouth",
+                    "id": "c7401fdf-1f07-41c2-809a-049462f710e9",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "77ba929d-1495-47a7-8c32-eabb563b1ded",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
+                    "groups": "gamepad",
+                    "action": "lightAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

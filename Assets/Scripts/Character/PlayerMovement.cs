@@ -23,6 +23,18 @@ public class PlayerMovement : MonoBehaviour
 
     float rotationFactorPerFrame = 7.0f;
     public float runMultiplier = 1.5f;
+    //int zero = 0;
+
+    float gravity = -0.68f;
+    float groundedGravity = -.05f;
+
+    bool isJumpPressed = false;
+    float initialJumpVelocity;
+    float maxJumpHeight = 9.7f;
+    float maxJumpTime = 2.5f;
+    bool isJumping = false;
+    int isJumpingHash;
+    bool isJumpAnimating = false;
 
     // Awake is called earlier than Start in Unity's event life cycle
     void Awake(){
@@ -34,13 +46,42 @@ public class PlayerMovement : MonoBehaviour
 
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
-
+        isJumpingHash = Animator.StringToHash("isJumping");
+        
     // set the player input callbacks
         playerInput.CharacterControls.Move.started += onMovementInput;
         playerInput.CharacterControls.Move.canceled += onMovementInput;
         playerInput.CharacterControls.Move.performed += onMovementInput;
         playerInput.CharacterControls.Run.started += onRun;
         playerInput.CharacterControls.Run.canceled += onRun;
+        playerInput.CharacterControls.Jump.started += onJump;
+        playerInput.CharacterControls.Jump.canceled += onJump;
+
+        setupJumpVariables();
+    }
+
+    void setupJumpVariables(){
+        float timeToApex = maxJumpTime / 2;
+        gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex,2);
+        initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
+    }
+
+    void handleJump(){
+        if (!isJumping && characterController.isGrounded && isJumpPressed){
+            animator.SetBool(isJumpingHash, true);
+            isJumpAnimating = true;
+            isJumping = true;
+            currentMovement.y = initialJumpVelocity * .5f;
+            currentRunMovement.y = initialJumpVelocity * .5f;
+        }
+        else if(!isJumpPressed && isJumping && characterController.isGrounded){
+            isJumping = false;
+        }
+    }
+
+    void onJump(InputAction.CallbackContext context){
+        isJumpPressed = context.ReadValueAsButton();
+        Debug.Log(isJumpPressed);
     }
 
     void onRun(InputAction.CallbackContext context){
@@ -104,6 +145,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void handleGravity(){
+        if(characterController.isGrounded){
+            if (isJumpAnimating){
+                animator.SetBool(isJumpingHash, false);
+                isJumpAnimating = false;
+            }
+            currentMovement.y = groundedGravity;
+            currentRunMovement.y = groundedGravity;
+        }
+        else{
+            currentMovement.y += gravity * Time.deltaTime;
+            currentRunMovement.y += gravity * Time.deltaTime;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -115,6 +171,8 @@ public class PlayerMovement : MonoBehaviour
         else{
             characterController.Move(currentMovement * Time.deltaTime);
         }
+        handleGravity();
+        handleJump();
     }
 
     void OnEnable(){

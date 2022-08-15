@@ -46,6 +46,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""f3ce5f27-620d-4159-b306-7d5f2c4d52c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""lightAttack"",
                     ""type"": ""Button"",
                     ""id"": ""5cfcdbe5-179d-4b88-b7dd-5c7e26a1ffcb"",
@@ -55,9 +64,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""heavyAttack"",
                     ""type"": ""Button"",
-                    ""id"": ""f3ce5f27-620d-4159-b306-7d5f2c4d52c9"",
+                    ""id"": ""1ab244c3-e6e4-4db3-99c2-dd2f8d81298f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -65,17 +74,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""086a77de-b5d4-473e-9cb8-65ecc2a59976"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""gamepad"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""7a6b262f-f988-486b-8e4b-e98d8fbd3cfe"",
@@ -133,6 +131,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""086a77de-b5d4-473e-9cb8-65ecc2a59976"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamepad"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""1bac979f-ab36-4076-b8c6-781e34372dd3"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
@@ -145,11 +154,55 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""cd7c62fa-29d9-4c77-8df8-563153907c42"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
                     ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77ba929d-1495-47a7-8c32-eabb563b1ded"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard/mouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6fea7984-4424-4688-9d6a-4fd98af5b833"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamepad"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""79a191e5-04a5-4325-8e35-61cd5504afb9"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""heavyAttack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69629689-18fc-42b8-93b8-c3487e844394"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""heavyAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -166,34 +219,23 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c7401fdf-1f07-41c2-809a-049462f710e9"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""id"": ""e9b14cda-0b59-47b5-9765-1ac3c9711607"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""gamepad"",
+                    ""groups"": """",
                     ""action"": ""lightAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6fea7984-4424-4688-9d6a-4fd98af5b833"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""id"": ""c7401fdf-1f07-41c2-809a-049462f710e9"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""77ba929d-1495-47a7-8c32-eabb563b1ded"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
+                    ""groups"": ""gamepad"",
+                    ""action"": ""lightAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -262,8 +304,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_CharacterControls = asset.FindActionMap("CharacterControls", throwIfNotFound: true);
         m_CharacterControls_Move = m_CharacterControls.FindAction("Move", throwIfNotFound: true);
         m_CharacterControls_Run = m_CharacterControls.FindAction("Run", throwIfNotFound: true);
-        m_CharacterControls_lightAttack = m_CharacterControls.FindAction("lightAttack", throwIfNotFound: true);
         m_CharacterControls_Jump = m_CharacterControls.FindAction("Jump", throwIfNotFound: true);
+        m_CharacterControls_lightAttack = m_CharacterControls.FindAction("lightAttack", throwIfNotFound: true);
+        m_CharacterControls_heavyAttack = m_CharacterControls.FindAction("heavyAttack", throwIfNotFound: true);
         // Menu
         m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
         m_Menu_accept = m_Menu.FindAction("accept", throwIfNotFound: true);
@@ -328,16 +371,18 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private ICharacterControlsActions m_CharacterControlsActionsCallbackInterface;
     private readonly InputAction m_CharacterControls_Move;
     private readonly InputAction m_CharacterControls_Run;
-    private readonly InputAction m_CharacterControls_lightAttack;
     private readonly InputAction m_CharacterControls_Jump;
+    private readonly InputAction m_CharacterControls_lightAttack;
+    private readonly InputAction m_CharacterControls_heavyAttack;
     public struct CharacterControlsActions
     {
         private @PlayerInput m_Wrapper;
         public CharacterControlsActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_CharacterControls_Move;
         public InputAction @Run => m_Wrapper.m_CharacterControls_Run;
-        public InputAction @lightAttack => m_Wrapper.m_CharacterControls_lightAttack;
         public InputAction @Jump => m_Wrapper.m_CharacterControls_Jump;
+        public InputAction @lightAttack => m_Wrapper.m_CharacterControls_lightAttack;
+        public InputAction @heavyAttack => m_Wrapper.m_CharacterControls_heavyAttack;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -353,12 +398,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Run.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRun;
                 @Run.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRun;
                 @Run.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRun;
-                @lightAttack.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLightAttack;
-                @lightAttack.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLightAttack;
-                @lightAttack.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLightAttack;
                 @Jump.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnJump;
+                @lightAttack.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLightAttack;
+                @lightAttack.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLightAttack;
+                @lightAttack.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLightAttack;
+                @heavyAttack.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnHeavyAttack;
+                @heavyAttack.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnHeavyAttack;
+                @heavyAttack.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnHeavyAttack;
             }
             m_Wrapper.m_CharacterControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -369,12 +417,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Run.started += instance.OnRun;
                 @Run.performed += instance.OnRun;
                 @Run.canceled += instance.OnRun;
-                @lightAttack.started += instance.OnLightAttack;
-                @lightAttack.performed += instance.OnLightAttack;
-                @lightAttack.canceled += instance.OnLightAttack;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @lightAttack.started += instance.OnLightAttack;
+                @lightAttack.performed += instance.OnLightAttack;
+                @lightAttack.canceled += instance.OnLightAttack;
+                @heavyAttack.started += instance.OnHeavyAttack;
+                @heavyAttack.performed += instance.OnHeavyAttack;
+                @heavyAttack.canceled += instance.OnHeavyAttack;
             }
         }
     }
@@ -434,8 +485,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
-        void OnLightAttack(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnLightAttack(InputAction.CallbackContext context);
+        void OnHeavyAttack(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {
